@@ -83,11 +83,12 @@ resources:
       user_data: |
           #!/bin/bash
           #User accounts
-          useradd root -m -U -s /bin/bash
-          usermod -aG sudo root
-          sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          echo "root:password" | chpasswd
-          sudo apt-get update
+          useradd smith -m -U -s /bin/bash
+          usermod -aG sudo smith
+          echo "smith:password" | chpasswd
+          sudo apt-get update -y
+          sudo apt-get upgrade -y
+          sudo apt-get install -y ubuntu-desktop
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
