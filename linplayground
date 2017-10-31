@@ -86,6 +86,7 @@ resources:
           useradd smith -m -U -s /bin/bash
           usermod -aG sudo smith
           echo "smith:password" | chpasswd
+          echo 'Acquire::http::proxy"http://pkg-cache.bbh.cyberschool.army.mil:3142";' > /etc/apt/apt.conf.d/02proxy
           apt-get update -y
           apt-get upgrade -y
           apt-get install -y ubuntu-desktop
