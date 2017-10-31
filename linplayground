@@ -86,9 +86,15 @@ resources:
           useradd smith -m -U -s /bin/bash
           usermod -aG sudo smith
           echo "smith:password" | chpasswd
-          sudo apt-get update -y
-          sudo apt-get upgrade -y
-          sudo apt-get install -y ubuntu-desktop
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y ubuntu-desktop
+          apt-get install -y python-tk
+          apt-get install -y python-pip
+          pip install --upgrade pip
+          pip install numpy
+          pip install pandas
+          pip install matplotlib
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
