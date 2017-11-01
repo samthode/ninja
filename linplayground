@@ -92,6 +92,7 @@ resources:
           apt-get install -y ubuntu-desktop
           apt-get install -y python-tk
           apt-get install -y python-pip
+          apt-get install -y gedit-plugins
           pip install --upgrade pip
           pip install numpy
           pip install pandas
