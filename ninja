@@ -89,14 +89,11 @@ resources:
           echo 'Acquire::http::proxy"http://pkg-cache.bbh.cyberschool.army.mil:3142";' > /etc/apt/apt.conf.d/02proxy
           apt-get update -y
           apt-get upgrade -y
-          #apt-get install -y ubuntu-desktop
-          #apt-get install -y python-tk
-          #apt-get install -y python-pip
+          apt-get install -y ubuntu-desktop
           apt-get install -y gcc
           apt-get install -y gdb
           apt-get install -y gedit-plugins
           apt-get install -y wget
-          pip install --upgrade pip
           
           mkdir /home/gr0k/stack_warmup
           wget -P  /home/gr0k/stack_warmup https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/stack_warmup/stack{1..5}.c
@@ -104,6 +101,7 @@ resources:
           mkdir /home/gr0k/abo
           wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/abo/abo{1..10}.c
           
+          chown -R gr0k:gr0k /home/gr0k/*
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
