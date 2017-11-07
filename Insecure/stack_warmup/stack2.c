@@ -1,6 +1,6 @@
 /* stack2.c                                     *
  * specially crafted to feed your brain by gera */
-#import <stdio.h>
+#include <stdio.h>
 
 int main() {
 	int cookie;
