@@ -83,20 +83,27 @@ resources:
       user_data: |
           #!/bin/bash
           #User accounts
-          useradd smith -m -U -s /bin/bash
-          usermod -aG sudo smith
-          echo "smith:password" | chpasswd
+          useradd gr0k -m -U -s /bin/bash
+          usermod -aG sudo gr0k
+          echo "gr0k:password" | chpasswd
           echo 'Acquire::http::proxy"http://pkg-cache.bbh.cyberschool.army.mil:3142";' > /etc/apt/apt.conf.d/02proxy
           apt-get update -y
           apt-get upgrade -y
           #apt-get install -y ubuntu-desktop
           #apt-get install -y python-tk
           #apt-get install -y python-pip
+          apt-get install -y gcc
+          apt-get install -y gdb
           apt-get install -y gedit-plugins
           apt-get install -y wget
           pip install --upgrade pip
           
-          wget -r https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/stack_warmup
+          mkdir /home/gr0k/stack_warmup
+          wget -P  /home/gr0k/stack_warmup https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/stack_warmup/stack{1..5}.c
+
+          mkdir /home/gr0k/abo
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/abo/abo{1..10}.c
+          
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
