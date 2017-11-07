@@ -1,8 +1,8 @@
-
 /* abo1.c                                       *
  * specially crafted to feed your brain by gera */
 
 /* Dumb example to let you get introduced...    */
+#include <string.h>
 
 int main(int argv,char **argc) {
 	char buf[256];
