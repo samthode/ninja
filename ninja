@@ -1,4 +1,4 @@
-description: Ubuntu Box for Programming
+description: Ubuntu Box for How to be Ninja
 
 heat_template_version: '2016-10-14'
 
@@ -89,14 +89,14 @@ resources:
           echo 'Acquire::http::proxy"http://pkg-cache.bbh.cyberschool.army.mil:3142";' > /etc/apt/apt.conf.d/02proxy
           apt-get update -y
           apt-get upgrade -y
-          apt-get install -y ubuntu-desktop
-          apt-get install -y python-tk
-          apt-get install -y python-pip
+          #apt-get install -y ubuntu-desktop
+          #apt-get install -y python-tk
+          #apt-get install -y python-pip
           apt-get install -y gedit-plugins
+          apt-get install -y wget
           pip install --upgrade pip
-          pip install numpy
-          pip install pandas
-          pip install matplotlib
+          
+          wget -r https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/stack_warmup
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
