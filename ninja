@@ -87,9 +87,9 @@ resources:
           usermod -aG sudo gr0k
           echo "gr0k:password" | chpasswd
           echo 'Acquire::http::proxy"http://pkg-cache.bbh.cyberschool.army.mil:3142";' > /etc/apt/apt.conf.d/02proxy
-          #apt-get update -y
-          #apt-get upgrade -y
-          #apt-get install -y ubuntu-desktop
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y ubuntu-desktop
           apt-get install -y gcc
           apt-get install -y gdb
           apt-get install -y gedit-plugins
