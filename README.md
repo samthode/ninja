@@ -11,8 +11,8 @@ The link for the training source code no longer works, but they can be accessed 
 The source code on the way back machine is wonky, I'm not sure how it actually compiled before. I've ported the examples over into directories on this git page.
 On startup, the VM automatically downloads and compiles the files.
 
-The source code is all located in /home/gr0k/<appropriate folder>
-The binaries compile in /home/gr0k/<appropriate folder>/bin
+The source code is all located in /home/gr0k/{appropriate folder}
+The binaries compile in /home/gr0k/{appropriate folder}/bin
 
 The machine default installs gcc and gdb for analysis. 
 The source code is compiled with -g so debugging symbols are included, you're welcome to recompile without them if you're looking for more of a challenge.
