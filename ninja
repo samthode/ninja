@@ -122,9 +122,9 @@ resources:
           
           EOF
           
-          chmod +x compile.sh
+          chmod +x /home/compile.sh
           chown gr0k:gr0k /home/compile.sh
-          /home/compile.sh
+          ./home/compile.sh
           
           chown -R gr0k:gr0k /home/gr0k/*
           reboot
