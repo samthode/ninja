@@ -101,6 +101,21 @@ resources:
           mkdir /home/gr0k/abo
           wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/abo/abo{1..10}.c
           
+          mkdir /home/gr0k/format_strings
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/format_strings/fs{1..5}.c
+          
+          mkdir /home/gr0k/signals
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/signals/s{1..4}.c
+          
+          mkdir /home/gr0k/esoteric
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/esoteric/e{1..5}.c
+          
+          mkdir /home/gr0k/stackguarded
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/stackguarded/sg{1..5}.c
+          
+          mkdir /home/gr0k/numeric
+          wget -P /home/gr0k/abo https://git.cybbh.space/samuel.c.thode/ninja/raw/master/Insecure/numeric/n{1..5}.c
+          
           cat << 'EOF' > /home/compile.sh
           #!/bin/bash
           dirs=$(ls -d -1 /home/gr0k/**)
@@ -116,7 +131,7 @@ resources:
                 fi
                 
                 # gcc -o <filename> <source code location>
-                $(gcc -o $dir/bin/$name $dir/$file)
+                $(gcc -fno-stack-protector -g -o $dir/bin/$name $dir/$file)
             done
           done
           
@@ -127,6 +142,9 @@ resources:
           ./home/compile.sh
           
           chown -R gr0k:gr0k /home/gr0k/*
+          
+          echo 0 > /proc/sys/kernel/randomize_va_space
+          
           reboot
       user_data_format: RAW
     type: OS::Nova::Server  
