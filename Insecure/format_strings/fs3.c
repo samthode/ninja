@@ -1,8 +1,3 @@
-
-Format Strings #3
-
-
-
 /* fs3.c                                       *
  * specially crafted to feed your brain by riq */
 
