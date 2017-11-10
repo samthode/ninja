@@ -20,6 +20,16 @@ The source code is compiled with -g so debugging symbols are included, you're we
 The default username / password is gr0k/password. You can change it by copy/pasting and editing it in the YAML when you start the VM on openstack.
 I haven't used variables yet though, so all the files will still install to the /home/gr0k folder.
 
+# Practice Directories
+======================
+1. Stack Warmup (5)
+2. Advanced Buffer Overflows (10)
+3. Format Strings (5)
+4. Signals (4)
+5. Esoteric (5)
+6. Stack Guarded (6)
+7. Numeric (5)
+
 Have fun, happy hacking.
 
 -gr0k
