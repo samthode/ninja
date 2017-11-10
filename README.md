@@ -1,5 +1,5 @@
 # Ninja Training Box
-=====
+====
 
 This trainingbox provides a training environment to workthrough Cisco's Talos Security's [How to Be Ninja](http://blog.talosintelligence.com/2009/07/how-do-i-become-ninja.html)
 
@@ -21,7 +21,7 @@ The default username / password is gr0k/password. You can change it by copy/past
 I haven't used variables yet though, so all the files will still install to the /home/gr0k folder.
 
 # Practice Directories
-=====
+====
 1. Stack Warmup (5)
 2. Advanced Buffer Overflows (10)
 3. Format Strings (5)
