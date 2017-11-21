@@ -130,7 +130,7 @@ resources:
                     mkdir $dir/bin
                 fi
                 
-                # gcc -o <filename> <source code location>
+                # gcc -fno-stack-protector -g -o   <filename>   <source code location>
                 $(gcc -fno-stack-protector -g -o $dir/bin/$name $dir/$file)
             done
           done
