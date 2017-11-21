@@ -77,7 +77,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.medium
-      image: Xenial Ubuntu 32
+      image: c753bc48-4667-41a7-8b38-1d3f409baaed
       networks:
       - port: {get_resource: float_port }
       user_data: |
