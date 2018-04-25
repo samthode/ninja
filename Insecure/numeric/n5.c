@@ -1,7 +1,7 @@
 /* n5.c                                         *
  * specially crafted to feed your brain by gera */
 
-#include 
+#include <stdio.h>
 
 int main(int argv, char **argc) {
 	char **args,buf[80];
