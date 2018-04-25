@@ -2,7 +2,6 @@
  * specially crafted to feed your brain by gera */
 
 /* This'll prepare you for The Next Step        */
-#include <stdio.h>
 
 int main(int argv,char **argc) {
 	extern system,puts; 
