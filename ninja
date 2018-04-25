@@ -76,8 +76,8 @@ resources:
   Playground:
     properties:
       diskConfig: AUTO
-      flavor: cy.medium
-      image: Xenial Ubuntu 32
+      flavor: disk.mega
+      image: Ubuntu 16.04
       networks:
       - port: {get_resource: float_port }
       user_data: |
