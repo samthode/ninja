@@ -1,10 +1,7 @@
-
 /* abo4.c                                           *
  * specially crafted to feed your brain by gera     */
 
 /* After this one, the next is just an Eureka! away */
-#include <stdio.h>
-
 
 extern system,puts; 
 void (*fn)(char*)=(void(*)(char*))&system;
