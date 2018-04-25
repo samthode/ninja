@@ -1,8 +1,8 @@
 /* n3.c                                         *
  * specially crafted to feed your brain by gera */
 
-#include 
-#include 
+#include <stdio.h>
+#include <string.h>
 
 unsigned int count;
 char **args;
