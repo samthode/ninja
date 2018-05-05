@@ -130,7 +130,10 @@ resources:
                     mkdir $dir/bin
                 fi
                 
-                # gcc -fno-stack-protector -g -o   <filename>   <source code location>
+                # gcc -fno-stack-protector -z execstack -g -o   <filename>   <source code location>
+                # -fno-stack-protector : removes stack canaries
+                # -z execstack : allows execution of shellcode in stack injections
+                # -g : compiles with gdb debugging information
                 $(gcc -fno-stack-protector -g -o $dir/bin/$name $dir/$file)
             done
           done
